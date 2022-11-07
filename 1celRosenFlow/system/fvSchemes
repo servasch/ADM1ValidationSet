@@ -1,0 +1,105 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSchemes;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+ddtSchemes
+{
+    default         Euler;
+}
+
+gradSchemes
+{
+    default         Gauss linear;
+}
+
+divSchemes
+{
+    default         none;
+    div(phi,T)      Gauss linearUpwind grad(T);
+    div(phi,pH)      Gauss linearUpwind grad(pH);
+    div(phi,Hplus)      Gauss linearUpwind grad(Hplus);
+    div(phi,amm)      Gauss linearUpwind grad(amm);
+    div(phi,CO2)      Gauss linearUpwind grad(CO2);
+    div(phi,H2)      Gauss linearUpwind grad(H2);
+    div(phi,psi4)      Gauss linearUpwind grad(psi4);
+    div(phi,psi5)      Gauss linearUpwind grad(psi5);
+    div(phi,psi6)      Gauss linearUpwind grad(psi6);
+    div(phi,psi7)      Gauss linearUpwind grad(psi7);
+    div(phi,psi77)      Gauss linearUpwind grad(psi77);
+    div(phi,psi777)      Gauss linearUpwind grad(psi777);
+    div(phi,psi8)      Gauss linearUpwind grad(psi8);
+	div(phi,CH4)      Gauss linearUpwind grad(CH4);
+    div(phi,psiIN)      Gauss linearUpwind grad(psiIN);
+    div(phi,Xc)      Gauss linearUpwind grad(Xc);
+    div(phi,X1)      Gauss linearUpwind grad(X1);
+    div(phi,X2)      Gauss linearUpwind grad(X2);
+    div(phi,X3)      Gauss linearUpwind grad(X3);
+    div(phi,X4)      Gauss linearUpwind grad(X4);
+    div(phi,X5)      Gauss linearUpwind grad(X5);
+    div(phi,X6)      Gauss linearUpwind grad(X6);
+    div(phi,X7)      Gauss linearUpwind grad(X7);
+    div(phi,X77)      Gauss linearUpwind grad(X77);
+    div(phi,X777)      Gauss linearUpwind grad(X777);
+    div(phi,X8)      Gauss linearUpwind grad(X8);
+    div(phi,XH2)      Gauss linearUpwind grad(XH2);
+
+}
+
+laplacianSchemes
+{
+    default         none;
+    laplacian(DT,T) Gauss linear corrected;
+    laplacian(DT,pH) Gauss linear corrected;
+    laplacian(DT,Hplus) Gauss linear corrected;
+    laplacian(DT,amm) Gauss linear corrected;
+    laplacian(DT,CO2) Gauss linear corrected;
+    laplacian(DT,H2) Gauss linear corrected;
+    laplacian(DT4,psi4) Gauss linear corrected;
+    laplacian(DT5,psi5) Gauss linear corrected;
+    laplacian(DT6,psi6) Gauss linear corrected;
+    laplacian(DT7,psi7) Gauss linear corrected;
+    laplacian(DT7,psi77) Gauss linear corrected;
+    laplacian(DT7,psi777) Gauss linear corrected;
+    laplacian(DT8,psi8) Gauss linear corrected;
+    laplacian(DT,CH4) Gauss linear corrected;
+    laplacian(DTX,psiIN) Gauss linear corrected;
+    laplacian(DTX,Xc) Gauss linear corrected;
+    laplacian(DTX,X1) Gauss linear corrected;
+    laplacian(DTX,X2) Gauss linear corrected;
+    laplacian(DTX,X3) Gauss linear corrected;
+    laplacian(DTX,X4) Gauss linear corrected;
+    laplacian(DTX,X5) Gauss linear corrected;
+    laplacian(DTX,X6) Gauss linear corrected;
+    laplacian(DTX,X7) Gauss linear corrected;
+    laplacian(DTX,X77) Gauss linear corrected;
+    laplacian(DTX,X777) Gauss linear corrected;
+    laplacian(DTX,X8) Gauss linear corrected;
+    laplacian(DTX,XH2) Gauss linear corrected;
+
+}
+
+interpolationSchemes
+{
+    default         linear;
+}
+
+snGradSchemes
+{
+    default         corrected;
+}
+
+
+// ************************************************************************* //

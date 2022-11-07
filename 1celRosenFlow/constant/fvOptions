@@ -1,0 +1,109 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant/heater";
+    object      fvOptions;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+/*
+options
+{
+    energySource //growth rate of psi1 aa
+    {
+        type            scalarSemiImplicitSource;
+
+        timeStart       0;
+        duration        100;
+        selectionMode   all;
+        volumeMode      specific;
+
+        injectionRateSuSp
+        {
+            Xc          (0 0); // W/m^3 == kg/m/s^3 ref gaden adm1 table5
+        }
+    }
+
+
+
+    energySource 	//decay rate of psi1 aa
+    {
+        type            scalarSemiImplicitSource;
+
+        timeStart       7200;
+        duration        14400;
+        selectionMode   all;
+        volumeMode      specific;
+
+        injectionRateSuSp
+        {
+            psi1          (0 0); // W/m^3 == kg/m/s^3 ref gabon adm1 table5
+        }
+    }
+
+
+    energySource 	//growth rate of psi2 sugar
+
+    {
+        type            scalarSemiImplicitSource;
+
+        timeStart       720;
+        duration        14400;
+        selectionMode   all;
+        volumeMode      specific;
+
+        injectionRateSuSp
+        {
+            psi2          (0 0); // W/m^3 == kg/m/s^3
+        }
+    }
+
+
+    energySource	//decay rate of psi2 sugar
+    {
+        type            scalarSemiImplicitSource;
+
+        timeStart       7200;
+        duration        14400;
+        selectionMode   all;
+        volumeMode      specific;
+
+        injectionRateSuSp
+        {
+            psi2          (0 0); // W/m^3 == kg/m/s^3
+        }
+    }
+
+
+    energySource	//decay rate of psi3 acetate
+
+    {
+        type            scalarSemiImplicitSource;
+
+        timeStart       6000;
+        duration        14400;
+        selectionMode   all;
+        volumeMode      specific;
+
+        injectionRateSuSp
+        {
+            psi3          (0 0); // W/m^3 == kg/m/s^3
+        }
+    }
+
+
+
+}
+
+*/
+
+// ************************************************************************* //

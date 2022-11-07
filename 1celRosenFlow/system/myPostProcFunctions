@@ -1,0 +1,142 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+Description
+    Writes graph data for specified fields along a line, specified by start
+    and end points.
+
+\*------------12---------------------------------------------------------------*/
+
+/*
+volFieldValueAve
+{
+    type            volFieldValue;
+    libs            ("libfieldFunctionObjects.so");
+
+    log             true;
+    writeControl    writeTime;
+    writeFields     true;
+
+    regionType      all;
+    operation       volAverage; // weighted?
+
+
+    fields
+    (
+        psi4
+        psi5
+        psi6
+        psi7
+        psi77
+        psi777
+        psi8
+        psiIN
+	T
+        Xc
+        X1
+        X2
+        X3
+        X4
+        X5
+        X6
+        X7
+        X8
+	pH
+	Hplus
+	H2
+	CO2
+	amm
+    );
+}
+
+volFieldValueMin
+{
+    type            volFieldValue;
+    libs            ("libfieldFunctionObjects.so");
+
+    log             true;
+    writeControl    1;
+    writeFields     true;
+
+    regionType      all;
+    operation       min;
+
+
+    fields
+    (
+        psi4
+        psi5
+        psi6
+        psi7
+        psi77
+        psi777
+        psi8
+        psiIN
+	T
+        Xc
+        X1
+        X2
+        X3
+        X4
+        X5
+        X6
+        X7
+        X8
+	pH
+	Hplus
+	H2
+	CO2
+	amm
+    );
+}
+*/
+
+volFieldValueMax
+{
+    type            volFieldValue;
+    libs            ("libfieldFunctionObjects.so");
+
+    log             true;
+    writeControl    writeTime;
+    writeFields     true;
+
+    regionType      all;
+    operation       max;
+
+
+    fields
+    (
+        psi4
+        psi5
+        psi6
+        psi7
+        psi77
+        psi777
+        psi8
+        psiIN
+	T
+        Xc
+        XH2
+        X1
+        X2
+        X3
+        X4
+        X5
+        X6
+        X7
+        X8
+	pH
+	Hplus
+	H2
+	CO2
+	amm
+	CH4
+    );
+}
+
+
+// ************************************************************************* //

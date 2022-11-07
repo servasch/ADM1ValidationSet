@@ -1,0 +1,125 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      transportProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+DT1              DT1 [0 2 -1 0 0 0 0] 0; // 
+DT2              DT2 [0 2 -1 0 0 0 0] 0; //  
+DT3              DT3 [0 2 -1 0 0 0 0] 0; // 
+DT4              DT4 [0 2 -1 0 0 0 0] 0;
+DT5              DT5 [0 2 -1 0 0 0 0] 0;
+DT6              DT6 [0 2 -1 0 0 0 0] 0;
+DT7              DT7 [0 2 -1 0 0 0 0] 0;
+DT8              DT8 [0 2 -1 0 0 0 0] 0;
+DTX              DTX [0 2 -1 0 0 0 0] 0; //
+DT               DT  [0 2 -1 0 0 0 0] 0; // 
+
+Kdel1             Kdel1 [0 0 0 0 0 0 0] 7;
+Kdel2             Kdel2 [0 0 0 0 0 0 0] 10;
+KX                KX   [0 0 0 1 0 0 0] 5;
+KS                KS   [0 0 0 1 0 0 0] 1;
+KH                KH   [0 0 0 0 0 0 0] 2;
+
+// first order decay rate of bacteria, From DavidGaden
+k_decXSu	k_decXSu [0 0 -1 0 0 0 0] 0.0200016; // (it was 0.0000002315 in 1/s, but we multiply it by 86400 to have it in 1/day;
+k_decXAa	k_decXAa [0 0 -1 0 0 0 0] 0.0200016;
+k_decXFa	k_decXFa [0 0 -1 0 0 0 0] 0.0200016;
+k_decXC4	k_decXC4 [0 0 -1 0 0 0 0] 0.0200016;
+k_decXPro	k_decXPro [0 0 -1 0 0 0 0] 0.0200016;
+k_decXAc	k_decXAc [0 0 -1 0 0 0 0] 0.0200016;
+k_decXH2	k_decXH2 [0 0 -1 0 0 0 0] 0.0200016;
+
+f_ChXc		f_ChXc [0 0 0 0 0 0 0] 0.20; //Dimensionless (from Table 6.1 in ADM1)
+f_PrXc		f_PrXc [0 0 0 0 0 0 0] 0.20;
+f_LiXc		f_LiXc [0 0 0 0 0 0 0] 0.25;
+f_FaLi		f_FaLi [0 0 0 0 0 0 0] 0.95;
+f_BuSu		f_BuSu [0 0 0 0 0 0 0] 0.12;
+f_ProSu		f_ProSu [0 0 0 0 0 0 0] 0.27;
+f_ProAa		f_ProAa [0 0 0 0 0 0 0] 0.05;
+f_ProVa		f_ProVa [0 0 0 0 0 0 0] 0.54;
+f_AcSu		f_AcSu [0 0 0 0 0 0 0] 0.41;
+f_AcAa		f_AcAa [0 0 0 0 0 0 0] 0.40;
+f_AcFa		f_AcFa [0 0 0 0 0 0 0] 0.70;
+f_AcVa		f_AcVa [0 0 0 0 0 0 0] 0.31;
+f_AcBu		f_AcBu [0 0 0 0 0 0 0] 0.80;
+f_AcPro		f_AcPro [0 0 0 0 0 0 0] 0.57;
+f_VaAa		f_VaAa [0 0 0 0 0 0 0] 0.23;
+f_BuAa		f_BuAa [0 0 0 0 0 0 0] 0.26;
+f_H2Su		f_H2Su [0 0 0 0 0 0 0] 0.19;
+f_H2Aa		f_H2Aa [0 0 0 0 0 0 0] 0.06;
+f_H2Fa		f_H2Fa [0 0 0 0 0 0 0] 0.30;
+f_H2Va		f_H2Va [0 0 0 0 0 0 0] 0.15;
+f_H2Bu		f_H2Bu [0 0 0 0 0 0 0] 0.20;
+f_H2Pro		f_H2Pro [0 0 0 0 0 0 0] 0.43;
+
+Y_Su		Y_Su [0 0 0 0 0 0 0] 0.1; // COD/COD Table 6.2
+Y_Aa		Y_Aa [0 0 0 0 0 0 0] 0.08;
+Y_Fa		Y_Fa [0 0 0 0 0 0 0] 0.06;
+Y_C4		Y_C4 [0 0 0 0 0 0 0] 0.2;
+Y_Pro		Y_Pro [0 0 0 0 0 0 0] 0.04;
+Y_Ac		Y_Ac [0 0 0 0 0 0 0] 0.05;
+Y_H2		Y_H2 [0 0 0 0 0 0 0] 0.06;
+
+k_HydCh 	k_HydCh [0 0 -1 0 0 0 0] 10; // COD/(COD.d) 
+k_HydPr 	k_HydPr [0 0 -1 0 0 0 0] 10;
+k_HydLi 	k_HydLi [0 0 -1 0 0 0 0] 10;
+k_mSu   	k_mSu [0 0 -1 0 0 0 0] 30;
+k_mAa   	k_mAa [0 0 -1 0 0 0 0] 50;
+k_mFa   	k_mFa [0 0 -1 0 0 0 0] 6;
+k_mC4   	k_mC4 [0 0 -1 0 0 0 0] 20; 
+k_mPro   	k_mPro [0 0 -1 0 0 0 0] 13; 
+k_mAc   	k_mAc [0 0 -1 0 0 0 0] 8;
+k_mH2   	k_mH2 [0 0 -1 0 0 0 0] 35;
+k_dis   	k_dis [0 0 -1 0 0 0 0] 0.5;
+
+kS              kS   [0 0 0 1 0 0 0] 1;
+K_SSu           K_SSu [0 0 0 1 0 0 0] 0.5; // kg COD/(m3) (These are based on Table 6.2)
+K_SAa           K_SAa [0 0 0 1 0 0 0] 0.3;
+K_SFa           K_SFa [0 0 0 1 0 0 0] 0.4;
+K_SC4           K_SC4 [0 0 0 1 0 0 0] 0.2;
+K_SPro          K_SPro [0 0 0 1 0 0 0] 0.1;
+K_SAc           K_SAc [0 0 0 1 0 0 0] 0.15;
+K_SH2           K_SH2 [0 0 0 1 0 0 0] 0.011; //based on ADM1 App A Table A.8
+
+
+kI_amm   	kI_amm [0 0 0 1 0 0 0] 0.0018; // kg.COD/m3
+kI_IN   	kI_IN [0 0 0 1 0 0 0] 0.00001;
+kI_H2   	kI_H2 [0 0 0 1 0 0 0] 0.0000035;
+
+pH_LL   	pH_LL [0 0 0 0 0 0 0] 6.5;
+pH_UL   	pH_UL [0 0 0 0 0 0 0] 7.5;
+pH_LL2   	pH_LL2 [0 0 0 0 0 0 0] 6;
+pH_UL2   	pH_UL2 [0 0 0 0 0 0 0] 7;
+
+k_a1		k_a1 [0 0 0 1 0 0 0] 0.0000004909;  // mol
+k_a2		k_a2 [0 0 0 1 0 0 0] 0.00000000005623;
+k_a3		k_a3 [0 0 0 1 0 0 0] 0.0000173;
+k_a4		k_a4 [0 0 0 1 0 0 0] 0.00001445;
+k_a5		k_a5 [0 0 0 1 0 0 0] 0.00001445;
+k_a6		k_a6 [0 0 0 1 0 0 0] 0.000000001567;
+k_w		k_w [0 0 0 2 0 0 0] 0.00000000000002065;
+
+AminusCplus		AminusCplus [0 0 0 1 0 0 0] 0.001;
+
+pHCoef		pHCoef [0 0 0 0 0 0 0] 3;
+Unit		Unit [0 0 0 1 0 0 0] 1;
+timeUnit	timeUnit [0 0 -1 0 0 0 0] 1;
+
+muA		muA [0 0 -1 0 0 0 0] 1; // for CO2
+muAP		muAP [0 0 -1 0 0 0 0] 1;
+muAB		muAB [0 0 -1 0 0 0 0] 1;
+muM		muM [0 0 -1 0 0 0 0] 1;
+
+// ************************************************************************* //
